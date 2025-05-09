@@ -1,0 +1,131 @@
+:root{
+    --primary: #0d6efd;
+    --secundary: #6c75;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --white: ##ffffff;
+    --gray: #adb5bd;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+}
+
+.header{
+    background: var(--primary);
+    color: var(--white);
+    padding: 1.2em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar{
+    background: var(--dark);
+    padding: 0.8em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: wrap;
+
+}
+
+.navbar .hamburger{
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: var(--white);
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--gray);
+}
+
+.layout-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 1.2rem;
+    gap: 1.2rem;
+}
+
+.sidebar {
+    flex: 1 0 250px;
+    background: var(--secundary);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.main-content {
+    flex: 3;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
+}
+
+.card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-whidth: 768px) {
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--dark);
+        padding: 1rem;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .layout-body {
+        flex-direction: column;
+    }
+
+    .sidebar .main-content {
+        flex: 1 0 100%;
+    }
+}
