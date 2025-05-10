@@ -38,7 +38,7 @@ body, html{
 }
 
 .navbar .hamburger{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background: none;
     border: none;
     color: var(--white);
